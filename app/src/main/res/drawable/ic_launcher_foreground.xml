@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A small car with a wrench above it, inside the 66dp safe zone of the 108dp adaptive icon. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Car body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,60 L38,49 Q40,45 44,45 L64,45 Q68,45 70,49 L74,60 Q78,61 78,65 L78,71 Q78,73 76,73 L32,73 Q30,73 30,71 L30,65 Q30,61 34,60 Z" />
+    <!-- Windows -->
+    <path
+        android:fillColor="#1E5A8A"
+        android:pathData="M40,59 L43,50 Q44,49 46,49 L53,49 L53,59 Z M56,59 L56,49 L62,49 Q64,49 65,50 L68,59 Z" />
+    <!-- Wheels -->
+    <path
+        android:fillColor="#1E5A8A"
+        android:pathData="M41,73 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 Z M67,73 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M41,73 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 Z M67,73 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 Z" />
+    <!-- Wrench -->
+    <path
+        android:fillColor="#FFC94D"
+        android:pathData="M47,38 L61,30 Q60,26 63,24 Q66,22 69,24 L66,27 L67,29 L69,30 L72,27 Q74,30 72,33 Q70,36 66,35 L52,43 Q50,44 48,43 Q46,41 47,38 Z" />
+</vector>

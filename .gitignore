@@ -1,0 +1,25 @@
+# Gradle / build output
+.gradle/
+.kotlin/
+build/
+/captures
+.externalNativeBuild/
+.cxx/
+
+# Local machine config
+/local.properties
+
+# Android Studio / IntelliJ
+*.iml
+/.idea/
+.DS_Store
+
+# Signing material — never commit
+keystore.properties
+*.jks
+*.keystore
+
+# Personal data (spec D10): the import file with VIN, service history and TPMS IDs,
+# and any exported backups. Never commit these.
+/private/
+carcare-backup-*.json

@@ -1,0 +1,48 @@
+{
+  "specName": "carcare",
+  "timestamp": "2026-11-23",
+  "status": "implemented-v0.1",
+  "capturedAtCommit": null,
+  "baseline": { "derivedFrom": "greenfield", "capturedAtCommit": null, "claims": [] },
+  "coverageMap": {
+    "Name/Scope": "done",
+    "Service rules": "done",
+    "Items": "done",
+    "Reminders": "done",
+    "Logging": "done",
+    "Reference info": "done",
+    "Data/Backup": "done",
+    "History fixes": "done"
+  },
+  "qaLog": [
+    { "area": "Name/Scope", "q": "App name", "a": "CarCare" },
+    { "area": "Service rules", "q": "How the next due point is set", "a": "Interval + override (pin)" },
+    { "area": "Service rules", "q": "Oil cadence", "a": "Two items, oil 5k / filter 10k (both 12 months)" },
+    { "area": "Service rules", "q": "Due-soon lead", "a": "1,000 km or 1 month, later changed to 1 month projected + 500 km floor" },
+    { "area": "Reminders", "q": "Monthly reminder behaviour", "a": "Fixed day/time, re-nag after 3 days" },
+    { "area": "Items", "q": "Extra items", "a": "Cabin + air filter, seasonal tyre swap, yearly inspections (no MFK / battery check)" },
+    { "area": "Logging", "q": "What a logged service records", "a": "Visit with several items + note, per-item partial flag" },
+    { "area": "Reference info", "q": "Format of the Keep-note info", "a": "Editable note cards" },
+    { "area": "Data/Backup", "q": "How personal data gets in and is backed up", "a": "Import file not in repo; JSON export/import + Auto Backup" },
+    { "area": "History fixes", "q": "Two suspicious log entries", "a": "Only fix: one entry's year" },
+    { "area": "Items", "q": "Starting item table", "a": "Approved as proposed" },
+    { "area": "Service rules", "q": "Odometer today", "a": "Asked after import, not seeded (D18)" },
+    { "area": "Items", "q": "Toyota schedule as reference", "a": "Find it elsewhere; show a Toyota note next to each item, owner overrides" },
+    { "area": "Red team", "q": "Run red-team pass", "a": "Yes; owner then delegated all red-team answers to recommended defaults" }
+  ],
+  "driftLedger": [],
+  "previewUrl": null,
+  "sourceIssue": null,
+  "feedbackRounds": [],
+  "redTeamStatus": "completed",
+  "redTeamFindings": [
+    { "title": "Pin vs whichever-first ambiguity", "severity": "major", "resolution": "D19 per-dimension pins" },
+    { "title": "What ships in APK vs import file", "severity": "major", "resolution": "D20 import file is full source" },
+    { "title": "Approximate seed reading and bad readings", "severity": "major", "resolution": "D18 no seed reading, D23 checks" },
+    { "title": "Reminders can silently stop", "severity": "major", "resolution": "D21 banner + reminder health" },
+    { "title": "Weak backup", "severity": "major", "resolution": "D22 backup-age nag + banner" },
+    { "title": "Stale km between readings", "severity": "minor", "resolution": "D24 estimated km" },
+    { "title": "Overdue items go silent", "severity": "minor", "resolution": "D25 listed in monthly prompt" },
+    { "title": "Lined-up jobs drift apart", "severity": "minor", "resolution": "D25 coming-up marker in Log visit" }
+  ]
+}
